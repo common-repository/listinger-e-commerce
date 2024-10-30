@@ -1,0 +1,380 @@
+/* Basic styles for the product listing plugin. */
+.listinger-product {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.listinger-product-columns {
+    display: flex;
+    gap: 20px;
+}
+
+.listinger-product h1,
+.listinger-product h2 {
+    margin-top: 0;
+}
+
+.listinger-product-meta p {
+    margin: 5px 0;
+}
+
+.listinger-product-meta {
+    margin-top: 20px;
+}
+
+.listinger-product-image {
+    flex: 1;
+    max-width: 30%;
+}
+
+.listinger-product-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    margin-bottom: 10px;
+}
+
+.listinger-product-details {
+    flex: 2;
+    padding: 10px;
+    font-family: inherit; /* Use theme's default font */
+}
+
+.listinger-product-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.listinger-button {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 15px;
+    background-color: #0073aa;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.listinger-button:hover {
+    background-color: #005177;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.listinger-button.listinger-mobile-number {
+    background-color: #ff5722; /* Different color for mobile number button */
+}
+
+#listinger-contact-form {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+#listinger-contact-form h2 {
+    margin-top: 0;
+}
+
+#listinger-contact-form p {
+    margin-bottom: 10px;
+}
+
+#listinger-contact-form input[type="text"],
+#listinger-contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#listinger-contact-form input[type="submit"] {
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#listinger-contact-form input[type="submit"]:hover {
+    background-color: #005177;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.listinger-product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap as needed */
+    font-family: inherit; /* Use theme's default font */
+    width: 100%;
+}
+
+.listinger-product-item {
+    flex: 1 1 100%; /* Make each product item take full width */
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 0px 4px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    font-family: inherit; /* Use theme's default font */
+}
+
+.listinger-product-item:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.listinger-product-thumbnail {
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+    display: ruby;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+.listinger-product-thumbnail img {
+    width: auto;
+    height: auto;
+    max-height: 300px;
+    display: block;
+}
+
+.listinger-share-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.listinger-share-buttons .listinger-button {
+    flex-grow: 1;
+}
+
+.listinger-related-products {
+    margin-top: 40px;
+}
+
+.listinger-related-products h2 {
+    font-size: 25px;
+}
+
+.listinger-related-products-slider {
+    display: flex;
+    gap: 20px;
+}
+
+.listinger-related-products-slider h3 {
+    font-size: 15px;
+}
+
+.listinger-related-product-item {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.listinger-related-product-item:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.listinger-related-product-item .listinger-product-thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+.listinger-contact-supplier-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1001;
+    font-family: inherit; /* Use theme's default font */
+}
+
+.listinger-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.listinger-button-mobile {
+    background: orange;
+    color: #fff;
+}
+
+.listinger-product-details h1 {
+    font-size: 30px;
+}
+
+.listinger-product-description h2 {
+    font-size: 28px;
+}
+
+.view-all-products {
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 7px;
+    display: table;
+    margin-top: 20px;
+    background: #1bb0ce;
+    color: #fff;
+} 
+
+.listinger-checkout {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.listinger-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.listinger-form-column {
+    flex: 0 0 48%;
+    box-sizing: border-box;
+    padding-right: 2%;
+}
+
+.listinger-form-column-full {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.listinger-form-column p, 
+.listinger-form-column-full p {
+    margin: 0 0 15px;
+}
+
+.listinger-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0073aa;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.listinger-button:hover {
+    background: #005177;
+}
+
+.listinger-single-product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.listinger-product-image {
+    flex: 1 1 40%;
+}
+
+.basic-info {
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.listinger-button {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.listinger-button:hover {
+    background-color: #e64a19;
+}
+
+.listinger-custom-buttons .button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+}
+
+.listinger-profile,
+.listinger-meta-section {
+    margin-bottom: 20px;
+}
+
+.listinger-three-column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.listinger-three-column ul {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.listinger-product-urls {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.listinger-product-urls.columns-1 li {
+    width: 100%;
+}
+
+.listinger-product-urls.columns-2 li {
+    width: 50%;
+}
+
+.listinger-product-urls.columns-3 li {
+    width: 33.33%;
+}
+
+.listinger-product-urls.columns-4 li {
+    width: 25%;
+}
+
+.listinger-product-urls.columns-5 li {
+    width: 20%;
+}
+
+.listinger-product-urls li {
+    box-sizing: border-box;
+    padding: 5px 0;
+}
+
+.listinger-product-urls li a {
+    display: block;
+    text-align: left;
+}

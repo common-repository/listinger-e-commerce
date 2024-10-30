@@ -1,0 +1,49 @@
+<?php
+/**
+ * Uninstall Listinger E-commerce Plugin
+ *
+ * This file is executed when the plugin is deleted.
+ * It will clean up the database by removing all options and custom post types related to the plugin.
+ */
+
+// Exit if accessed directly
+if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
+    exit;
+}
+
+// Custom post type and taxonomy to clean up
+$post_type = 'listinger_product';
+$taxonomy  = 'listinger_product_category';
+
+// Delete all products and associated metadata
+$products = get_posts( array(
+    'post_type'      => $post_type,
+    'posts_per_page' => -1,
+    'post_status'    => 'any',
+    'fields'         => 'ids',
+) );
+
+foreach ( $products as $product_id ) {
+    wp_delete_post( $product_id, true );
+}
+
+// Delete all terms in the custom taxonomy
+$terms = get_terms( array(
+    'taxonomy'   => $taxonomy,
+    'hide_empty' => false,
+) );
+
+foreach ( $terms as $term ) {
+    wp_delete_term( $term->term_id, $taxonomy );
+}
+
+// Delete all custom plugin options
+delete_option( 'listinger_product_options' );
+delete_option( 'listinger_import_export_options' );
+
+// Drop any custom database tables if needed (Example: if you had custom tables)
+// global $wpdb;
+// $wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}your_custom_table_name" );
+
+// Optionally, remove any transients used by the plugin
+// delete_transient( 'listinger_transient_name' );
